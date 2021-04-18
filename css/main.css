@@ -266,7 +266,7 @@ a#scrollUp i {
 .search_box input {
     background: #F0F0E9;
     border: medium none;
-    color: navy;
+    color: orange;
     font-family: 'roboto';
     font-size: 15px;
     font-weight: 900;
@@ -276,7 +276,7 @@ a#scrollUp i {
     width: 255px;
     background-image: url(../images/home/searchicon.png);
     background-repeat: no-repeat;
-    border-radius: 40%;
+    border-radius: 3.5%;
     background-position: 230px;
 }
 
