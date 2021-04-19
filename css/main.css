@@ -1,4 +1,4 @@
-﻿/*************************
+/*************************
 *******Typography******
 **************************/
 
@@ -10,7 +10,6 @@ body {
     position: relative;
     font-weight: 400px;
 }
-
 ul li {
     list-style: none;
 }
@@ -211,7 +210,7 @@ a#scrollUp i {
     font-weight: 300;
     padding: 0;
     padding-right: 0;
-    margin-top: 100px;
+    margin-top: 18px;
 }
 
 .shop-menu ul li a i {
@@ -249,7 +248,7 @@ a#scrollUp i {
 .mainmenu ul li a {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     padding: 0;
     padding-bottom: 10px;
@@ -515,7 +514,7 @@ ul.sub-menu {
     margin-top: 0;
     outline: medium none;
     padding: 7px;
-    width: 212px;
+    width: 111%;
 }
 
 .searchform button {
@@ -569,8 +568,8 @@ ul.sub-menu {
 **************************/
 
 #slider {
-    height: 500px;
-    width: 100%;
+   /* height: 500px;
+    width: 100%;*/
     padding-bottom: 45px;
 }
 
@@ -650,7 +649,7 @@ ul.sub-menu {
 }
 
 .right {
-    right: -67px;
+    right: 0;
 }
 
 .category-products {
