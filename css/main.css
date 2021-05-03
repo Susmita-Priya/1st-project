@@ -433,7 +433,7 @@ h2.title {
     height: 0;
     position: absolute;
     -webkit-transition: height 500ms ease 0s;
-    transition: height 500ms ease 0s; /*name,nmte delay,timing function,koto somoi por nambe*/
+    transition: height 500ms ease 0s; /*name,time-duration,timing function,time delay*/
     width: 100%;
     display: block;
 }
