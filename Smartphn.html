@@ -3,77 +3,45 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <title>Smartphone | E-Shopper</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/price-range.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
 	<link rel="stylesheet" href="Icon/css/font-awesome.min.css">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-    <style>
-    	header{
-			background:url(projectpic/Wallpaper20160706_022528.jpeg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			position:sticky;
-			top: -228px;
-			z-index: 1;
-    	}
-
-    </style>
 </head><!--/head-->
 
 <body>
 	<header id="header"><!--header-->
-		
-		<div class="header-middle"><!--header-middle-->
+		<div class="header-top"><!--header-top-->
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 clearfix">
-						<div class="logo pull-left">
-							<a href="index.html"></a><img src="images/home/FashionBD (4).png" alt="" / height="150px">
-						</div>
-						<div class="btn-group pull-right clearfix">
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									Shop
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="shop.html">Products</a></li>
-									<li><a href="product-details.html">Product details</a></li>
-								</ul>
-							</div>
+					<div class="col-md-4 clearfix">  <!-- grid layout, clearfix-clear float -->
+						<div class="logo pull-left">  <!-- pull left-float left (bootstrap) -->
+						<img src="images/home/FashionBD (4).png" alt="" / height="150px">
 						</div>
 					</div>
 					<div class="col-md-8 clearfix">
 						<div class="shop-menu clearfix pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
-								<li><a href=""><i class="fa fa-star-o" aria-hidden="true"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="account.html"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="wishlist.html"><i class="fa fa-star-o" aria-hidden="true"></i> Wishlist</a></li>
 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login/Sign up</a></li>
+								<li class="dropdown"><a href="#"><i class="fa fa-lock"></i>Sign up/Login as<i class="fa fa-angle-down"></i> </a>
+									 <ul role="menu" class="sub-menu">
+                                        <li><a href="#">Admin</a></li>
+										<li><a href="logincustomer.html">Customer</a></li>
+										 <li><a href="#">Shopper</a></li>
+										<li><a href="#">Delivery Boy</a></li>
+                                    </ul>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!--/header-middle-->
+		</div><!--/header-top-->
 	
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
@@ -89,15 +57,9 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Home</a></li>
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-                                    </ul>
-                                </li> 
-								<li><a href="contact-us.html">Contact</a></li>
-								<li><a href=" ">Feedback</a></li>
+								<li><a href="index.html" class="active">Home</a></li> 
+								<li><a href="about.html">About</a></li>
+								<li><a href="feedback.html">Feedback</a></li>
 							</ul>
 						</div>
 					</div>
@@ -111,11 +73,6 @@
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 
-	<section id="advertisement">
-		<div class="container">
-			<marquee behavior="scroll" direction="right" scrollamount="8" ><img src="images/home/Special Offer for Today (4).png" alt="" /></marquee>
-		</div>
-<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
@@ -200,10 +157,6 @@
 								</div>
 							</div>
 						</div><!--/category-products-->
-
-						<div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" />
-						</div><!--/shipping-->
 					
 					</div>
 				</div>
@@ -408,57 +361,6 @@
 </section>
 </section>
 <footer id="footer"><!--Footer-->
-		<div class="footer-widget">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Service</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Online Help</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Order Status</a></li>
-								<li><a href="#">Change Location</a></li>
-								<li><a href="#">FAQ’s</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Policies</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privecy Policy</a></li>
-								<li><a href="#">Refund Policy</a></li>
-								<li><a href="#">Billing System</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Company Information</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">Store Location</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3 col-sm-offset-1">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<form action="#" class="searchform">
-								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-								<p>Get the most recent updates from <br />our site and be updated your self...</p>
-							</form>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		
 		<div class="footer-bottom">
 			<div class="header_top"><!--footer bottom-->
 			<div class="container">
@@ -476,7 +378,6 @@
 								<li><a href=""><i class="fa fa-facebook"></i></a></li>
 								<li><a href=""><i class="fa fa-twitter"></i></a></li>
 								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble"></i></a></li>
 								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
@@ -485,12 +386,7 @@
 			</div>
 		</div><!--/footer bottom-->
 		</div>
-		
-		
 	</footer><!--/Footer-->
-	
-
-  
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
