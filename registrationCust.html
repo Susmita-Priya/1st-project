@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Registration</title>
+		<link href="css/bootstrapreg.min.css" rel="stylesheet">
+         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+	    <link href="css/main.css" rel="stylesheet">
+	    <link href="css/responsive.css" rel="stylesheet">
+		<style type="text/css">
+			.btn-danger {
+   					 float: none !important;
+   					margin-right: 76px!important;
+                    margin-left: 76px!important;
+            }
+
+			body{
+				background-image: url(projectpic/Wallpaper20160706_022528.jpeg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			}
+			.pos{
+				opacity: 0.8;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header"><!--header-->
+		<div class="header-top"><!--header-top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 clearfix">  <!-- grid layout, clearfix-clear float -->
+						<div class="logo pull-left">  <!-- pull left-float left (bootstrap) -->
+						<img src="images/home/FashionBD (4).png" alt="" / height="150px">
+						</div>
+					</div>
+					<div class="col-md-8 clearfix">
+						<div class="shop-menu clearfix pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="account.html"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="wishlist.html"><i class="fa fa-star-o" aria-hidden="true"></i> Wishlist</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li class="dropdown"><a href="#"><i class="fa fa-lock"></i>Sign up/Login as<i class="fa fa-angle-down"></i> </a>
+									 <ul role="menu" class="sub-menu">
+                                        <li><a href="#">Admin</a></li>
+										<li><a href="logincustomer.html">Customer</a></li>
+										 <li><a href="#">Shopper</a></li>
+										<li><a href="#">Delivery Boy</a></li>
+                                    </ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-top-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html" class="active">Home</a></li> 
+								<li><a href="about.html">About</a></li>
+								<li><a href="feedback.html">Feedback</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	<section class="bdy">
+		<div class="container my-5">
+			<div class="row">
+				<div class="col-md-5 offset-md-3">
+					<!-- ekahane offset mane hocce se 3 ta column ke skip korbe tai from ta middle e ace -->
+					<div class="card bg-info pos">
+						<div class="card-header">
+							<h2 class="text-danger text-center"> Register</h2>
+						</div>
+						<div class="card-body ">
+							
+							<form action="#" method="post">
+								<div class="form-group">
+									<label for="name">Full Name <span class="text-danger">*</span></label>
+									<input type="text" name="username" id="name" class="form-control" required="" placeholder="Please enter your name" >
+									
+								</div>
+								<div class="form-group">
+									<label for="number">Contact Number <span class="text-danger">*</span></label>
+									<input type="text" name="number" id="number" class="form-control " required="" placeholder="Please enter your contact number" >
+									
+								</div>
+								<div class="form-group">
+									<label for="email">E-mail address <span class="text-danger">*</span></label>
+									<input type="email" name="email" id="email"  class="form-control "placeholder="Please enter your email">
+								</div>
+								<div class="form-group">
+									<label for="dob">Date of Birth <span class="text-danger">*</span></label>
+									<input type="date" name="dob" id="dob"  class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="dis">Division <span class="text-danger">*</span></label>
+									<select name="district" id="dis"  class="form-control">
+										<option value="dhaka">Dhaka</option>
+										<option value="rangpur">Rangpur</option>
+										<option value="madaripur">Chittagong</option>
+										<option value="khulna">Khulna</option>
+										<option value="ragsahi">Rajsahi</option>
+										<option value="ragsahi">Mymensing</option>
+										<option value="ragsahi">Barishal</option>
+										
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="name">Address <span class="text-danger">*</span></label>
+									<input type="text" name="address" id="address" class="form-control" required="" placeholder="Please enter your address" >
+									
+								</div>
+								<div class="form-group">
+									<label for="dis">Password <span class="text-danger">*</span></label>
+									<input type="password" name="pass" id="pass" class="form-control"required="" placeholder="Please enter your password" ><br>
+								</div>
+								<div class="form-group">
+									<label for="dis">Confirm Password <span class="text-danger">*</span></label>
+									<input type="password" name="pass1" id="pass1" class="form-control"required="" placeholder="Please again enter your password" ><br>
+								</div>
+								</div>
+								
+								
+								<div class="card-footer text-center">
+									<div class="form-group">
+										<button type="submit" class="btn btn-success mx-3">Register</button>
+										<button type="reset" class="btn btn-danger mx-3">Reset</button>
+										<a href="logincustomer.html" class="btn btn-primary mx-3 my-2">Back</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+		
+		<!-- jquery v3.5.1 JS -->
+		<script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+		<!-- Popper JS -->
+		<script src="assets/js/popper.min.js"></script>
+		<!-- Bootstrap v4.5.3 JS -->
+		<script src="assets/js/bootstrap.min.js"></script>
+		<!-- Main JS -->
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
