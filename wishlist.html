@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cart | FashionBD</title>
+    <title>wishlist | FashionBD</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
@@ -13,6 +13,22 @@
 	img{
 		height:90px;
 		width: 90px;
+	}
+	.buttonn{
+		background: #fe980f !important;
+    color: #080808 !important;
+    display: inline-block !important;
+    font-size: 16px !important;
+    height: 40px !important;
+     overflow: hidden; 
+    text-align: center !important;
+    width: 97px !important;
+    float: left !important;
+     line-height: 26px; 
+    margin-top: -10px;
+    border: 1px solid black;
+}
+
 	}
 </head>
 
@@ -76,7 +92,7 @@
 	<section id="cart_items"> <!-- cart -->
 		<div class="container">
 			<div class="breadcrumbs">
-				<h1 class="headd">Shopping cart</h1>
+				<h1 class="headd">Wishlist</h1>
 			</div>
 			<div class="table-responsive cart_info">
 				<table class="table table-condensed table-hover">
@@ -85,8 +101,7 @@
 							<td class="image">Item</td>
 							<td class="description"></td>
 							<td class="price">Price</td>
-							<td class="quantity">Quantity</td>
-							<td class="total">Total</td>
+							<td>Add to cart</td>
 							<td></td>
 						</tr>
 					</thead>
@@ -104,13 +119,8 @@
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
+									<a class="btn btn-default buttonn" href="">Cart</a>
 								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">৳ 5600</p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
@@ -129,13 +139,8 @@
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
+									<a class="btn btn-default buttonn" href="">Cart</a>
 								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">৳ 3500</p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
@@ -154,13 +159,8 @@
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
+									<a class="btn btn-default buttonn" href="">Cart</a>
 								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">৳ 2300</p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
@@ -171,21 +171,6 @@
 			</div>
 		</div>
 	</section>
-	<section id="do_action">
-		<div class="container">
-			<div class="col-sm-6">
-					<div class="total_area">
-						<ul>
-							<li>Cart Total <span>৳ 23000</span></li>
-							<li>Tax <span>৳ 23</span></li>
-							<li>delivery charge <span>Free</span></li>
-							<li>Total <span>৳ 23023</span></li>
-						</ul>
-							<a class="btn btn-default update" href="">Payment</a>
-				</div>
-			</div>
-		</div>
-	</section><!--/#do_action-->
 	<footer id="footer"><!--Footer-->
 		<div class="footer-bottom">
 			<div class="header_top"><!--footer bottom-->
