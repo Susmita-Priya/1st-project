@@ -32,6 +32,9 @@
                  font-size: 3rem;
                  /*font-weight: bold;*/
 			}
+			.textarea{
+				font-size: 16px;
+			}
 			/*.mx-5 {
               margin-left: 6rem!important;
           }*/
@@ -45,23 +48,6 @@
 					<div class="col-md-4 clearfix">  <!-- grid layout, clearfix-clear float -->
 						<div class="logo pull-left">  <!-- pull left-float left (bootstrap) -->
 						<img src="images/home/FashionBD (4).png" alt="" / height="150px">
-						</div>
-					</div>
-					<div class="col-md-8 clearfix">
-						<div class="shop-menu clearfix pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="account.html"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="wishlist.html"><i class="fa fa-star-o" aria-hidden="true"></i> Wishlist</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i><sup class="number badge bg-light rounded-circle">2</sup> Cart</a></li>
-								<li class="dropdown"><a href="#"><i class="fa fa-lock"></i>Sign up/Login as<i class="fa fa-angle-down"></i> </a>
-									 <ul role="menu" class="sub-menu">
-                                        <li><a href="#">Admin</a></li>
-										<li><a href="logincustomer.html">Customer</a></li>
-										 <li><a href="#">Shopper</a></li>
-										<li><a href="#">Delivery Boy</a></li>
-                                    </ul>
-								</li>
-							</ul>
 						</div>
 					</div>
 				</div>
@@ -85,6 +71,7 @@
 								<li><a href="index.html" class="active">Home</a></li> 
 								<li><a href="about.html">About</a></li>
 								<li><a href="feedback.html">Feedback</a></li>
+								<li><a href="del_status.html">Delivery-status</a></li>
 							</ul>
 						</div>
 					</div>
@@ -107,21 +94,22 @@
 									<div class="form-group text-light font-weight-bold">
 										<div class="form-group">
 											<label for="username">Name <span class="text-danger">*</span></label>
-											<input type="text" name="username" id="username" class="form-control" required placeholder="Enter Your Name">
+											<input type="text" name="username" id="username" class="form-control" required="" placeholder="Enter Your Name">
 										</div>
 										<label for="email">Email Address <span class="text-danger">*</span></label>
-										<input type="email" name="email" id="email"  class="form-control">
+										<input type="email" name="email" id="email"  class="form-control" required="" placeholder="Enter Your Email">
 									</div>
 									<div class="form-group">
 										<label for="subject">Product <span class="text-danger">*</span></label>
-										<input type="text" name="subject" id="subject" class="form-control" required placeholder="Enter Your Subject">
+										<input type="text" name="subject" id="subject" class="form-control" required="" placeholder="Enter product's name">
 									</div>
 									<label for="address">Your Feedback <span class="text-danger">*</span></label>
 									
-									<textarea name="" id="address" cols="30" rows="10" class="text"></textarea><br>
+									<textarea name="" id="address" cols="30" rows="10" class="text"required="" placeholder="Give feedback"></textarea><br>
 									
 									<div class="card-footer">
 										<div class="form-group text-center">
+											<p class=" text-white">Login first! &nbsp &nbsp &nbsp <a href="logincustomer.html" class="txt">Login</a></p>
 											<button type="submit" class="btn btn-success mx-3 my-2">Submit</button>
 											<button type="reset" class="btn btn-danger mx-3 my-2">Reset</button>
 										</div>
