@@ -39,23 +39,7 @@
 						<img src="images/home/FashionBD (4).png" alt="" / height="150px">
 						</div>
 					</div>
-					<div class="col-md-8 clearfix">
-						<div class="shop-menu clearfix pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="account.html"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="wishlist.html"><i class="fa fa-star-o" aria-hidden="true"></i> Wishlist</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i><sup class="number badge bg-light rounded-circle">2</sup> Cart</a></li>
-								<li class="dropdown"><a href="#"><i class="fa fa-lock"></i>Sign up/Login as<i class="fa fa-angle-down"></i> </a>
-									 <ul role="menu" class="sub-menu">
-                                        <li><a href="#">Admin</a></li>
-										<li><a href="logincustomer.html">Customer</a></li>
-										 <li><a href="#">Shopper</a></li>
-										<li><a href="#">Delivery Boy</a></li>
-                                    </ul>
-								</li>
-							</ul>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</div><!--/header-top-->
@@ -95,7 +79,7 @@
 						</div>
 						<div class="card-body ">
 							
-							<form action="#" method="post">
+							<form action="insert.php" method="post">
 								<div class="form-group">
 									<label for="name">Full Name <span class="text-danger">*</span></label>
 									<input type="text" name="username" id="name" class="form-control" required="" placeholder="Please enter your name" >
@@ -108,15 +92,15 @@
 								</div>
 								<div class="form-group">
 									<label for="email">E-mail address <span class="text-danger">*</span></label>
-									<input type="email" name="email" id="email"  class="form-control "placeholder="Please enter your email">
+									<input type="email" name="email" id="email"  class="form-control "required="" placeholder="Please enter your email">
 								</div>
 								<div class="form-group">
 									<label for="dob">Date of Birth <span class="text-danger">*</span></label>
-									<input type="date" name="dob" id="dob"  class="form-control">
+									<input type="date" name="dob" id="dob"  class="form-control" required="">
 								</div>
 								<div class="form-group">
 									<label for="dis">Division <span class="text-danger">*</span></label>
-									<select name="district" id="dis"  class="form-control">
+									<select name="district" id="dis"  class="form-control" required="">
 										<option value="dhaka">Dhaka</option>
 										<option value="rangpur">Rangpur</option>
 										<option value="madaripur">Chittagong</option>
@@ -136,16 +120,10 @@
 									<label for="dis">Password <span class="text-danger">*</span></label>
 									<input type="password" name="pass" id="pass" class="form-control"required="" placeholder="Please enter your password" ><br>
 								</div>
-								<div class="form-group">
-									<label for="dis">Confirm Password <span class="text-danger">*</span></label>
-									<input type="password" name="pass1" id="pass1" class="form-control"required="" placeholder="Please again enter your password" ><br>
 								</div>
-								</div>
-								
-								
 								<div class="card-footer text-center">
 									<div class="form-group">
-										<button type="submit" class="btn btn-success mx-3">Register</button>
+										<button type="submit" name="submit" class="btn btn-success mx-3">Register</button>
 										<button type="reset" class="btn btn-danger mx-3">Reset</button>
 										<a href="logincustomer.html" class="btn btn-primary mx-3 my-2">Back</a>
 									</div>
