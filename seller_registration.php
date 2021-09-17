@@ -46,6 +46,7 @@ session_start();
 
 		if(isset($_POST['submit'])){
          
+        $idd='12345';
 		$id= mysqli_real_escape_string($con,$_POST['id']);
 		$username=mysqli_real_escape_string($con, $_POST['username']);
 		$number= mysqli_real_escape_string($con,$_POST['number']);
@@ -69,7 +70,7 @@ session_start();
 		<?php
 		}
 		else{
-          if($password===$cpassword)
+          if($password===$cpassword && $id===$idd)
           	// data and value check ===
 		{
 		$insertquery = "insert into loginseller(id,email,name,contact,address,pass,con_pass) values('$id','$email','$username','$number','$address','$pass','$pass1')";
@@ -79,21 +80,22 @@ session_start();
 				?>
 				
  				<script>
-			alert("Insert successful !!");
+			alert("Registration successful !!");
+			location.replace("sellerlogin.php");
 		   </script>
 		   <?php
 	
 		}else{
 			?>
 			<script>
-			alert("Data Can't Insert");
+			alert("Registration unsuccessfil !");
 		   </script>
 		   <?php
 		}
 	}else{
 			?>
 		   <script >
-			alert("Passwords are not matching");
+			alert("Password or id is not matching");
 		   </script>
 		   <?php
 		}
@@ -152,8 +154,8 @@ session_start();
 							
 							<form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
 								<div class="form-group">
-									<label for="id">Id <span class="text-danger">*</span></label>
-									<input type="password" name="id" id="id"  class="form-control "required="" value="12345" readonly="">
+									<label for="id">Id(Collect from office)<span class="text-danger">*</span></label>
+									<input type="text" name="id" id="id"  class="form-control "required="" placeholder="Please enter Seller id">
 								</div>
 								<div class="form-group">
 									<label for="email">Email address<span class="text-danger">*</span></label>

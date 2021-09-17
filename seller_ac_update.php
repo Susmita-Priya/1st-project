@@ -1,6 +1,16 @@
 <?php 
 session_start();
  ?>
+<?php
+include ('insert.php');
+error_reporting(0);
+$em=$_GET['em'];
+$nm=$_GET['nm']; 
+$cn=$_GET['cn']; 
+$id=$_GET['id'];  
+$add =$_GET['add'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,51 +54,32 @@ session_start();
 	h2{
 		font-size: 25px!important;
 	}
-	.already{
-				color: white;
-				font-size: 17px;
-			}
-			.al{
-				color: orange;
-				font-size: 17px;
-			}
 </style>
 </head><!--/head-->
-
-<body>
-	<?php 
-		$user="";
-		$numbr="";
-		$id="";
-		$address="";
-		$email="";
-        include 'insert.php';
-
-		if(isset($_POST['submit'])){
+<?php
+	include ('insert.php');
+			if(isset($_POST['submit']))
+			{
          
-		$email= $_POST['email'];
+		$username=mysqli_real_escape_string($con, $_POST['username']);
+		$number= mysqli_real_escape_string($con,$_POST['nmbr']);
+		$email= mysqli_real_escape_string($con,$_POST['email']);
+		$id= mysqli_real_escape_string($con,$_POST['id']);
+		$address=mysqli_real_escape_string( $con,$_POST['address']);
 
-		$emailquery ="select * from loginseller where email='$email'";
-		$query = mysqli_query ($con,$emailquery) or die("query faild");
+         $emailquery="UPDATE loginseller SET id='$id',name='$username',contact='$number',address='$address' WHERE email='$email'";
 
-		$emailcount = mysqli_num_rows($query);
-
-		if($emailcount){
-			$email_pass=mysqli_fetch_assoc($query);
-			$user=$email_pass['name'];
-			$numbr=$email_pass['contact'];
-			$id=$email_pass['id'];
-			$address=$email_pass['address'];
-			}else{	
-			?>
-			<script>
-			alert("Invalid Email");
-			</script>
-			<?php
-				}
-			}
-
-        ?>
+         $query = mysqli_query($con,$emailquery) or die("query faild");
+         if($query)
+         ?>
+         <script>
+		 alert("Successful !");
+		location.replace("seller_account.php");
+		</script>
+		<?php
+	}
+        ?> 
+<body>
 	<header id="header"><!--header-->
 		<div class="header-top"><!--header-top-->
 			<div class="container">
@@ -98,13 +89,6 @@ session_start();
 						<img src="images/home/FashionBD (4).png" alt="" / height="150px">
 						</div>
 					</div>
-					<div class="col-md-8 clearfix">
-			<div class="shop-menu clearfix pull-right">
-				<ul class="nav navbar-nav">
-								<li><a href="seller_dashboard.php"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
-							</ul>
-			</div>
-		</div>
 				</div>
 			</div>
 		</div><!--/header-top-->
@@ -140,36 +124,33 @@ session_start();
 							
 							<form action="#" method="post">
 								<div class="form-group">
-									<label for="email">E-mail address</label>
-									<input type="email" name="email" id="email"  class="form-control"value="<?php echo $email;?>" placeholder="Enter your email address" >
-								</div>
-								<div class="form-group text-center">
-										<button type="submit" name="submit" class="btn btn-success mx-3 my-2">Ok</button>
+									<label for="id">Id</label>
+									<input type="text" name="id" id="id" class="form-control " value="<?php echo $id;?>" >
 								</div>
 								<div class="form-group">
-									<label for="id">Seller Id </label>
-									<input type="text" name="id" id="id" class="form-control" value="<?php echo $id;?>" >
-									
+									<label for="email">E-mail address</label>
+									<input type="email" name="email" id="email"  class="form-control" value="<?php echo $em;?>" readonly="">
 								</div>
 								<div class="form-group">
 									<label for="name">Full Name </label>
-									<input type="text" name="username" id="name" class="form-control" value="<?php echo $user;?>" >
+									<input type="text" name="username" id="name" class="form-control" value="<?php echo $nm;?>" >
 									
 								</div>
 								<div class="form-group">
 									<label for="nmbr">Contact Number</label>
-									<input type="text" name="nmbr" id="nmbr" class="form-control "  value="<?php echo $numbr;?>" >
+									<input type="text" name="nmbr" id="nmbr" class="form-control "  value="<?php echo $cn;?>" >
 								</div>
 								<div class="form-group">
 									<label for="address">Address</label>
-									<input type="text" name="address" id="address" class="form-control"  value="<?php echo $address;?>" >
+									<input type="text" name="address" id="address" class="form-control"  value="<?php echo $add;?>" >
 									
 								</div>
 								</div>
 								
 								<div class="card-footer text-center">
-									<div>
-										<p class="already"><span><a class="al" href="seller_ac_update.php?em=<?php echo $email;?> & nm=<?php echo $user;?> &cn=<?php echo $numbr;?> & id=<?php echo $id;?> & add=<?php echo $address;?>">Update information ?</a></span></p>
+									<div class="form-group">
+										<button type="submit" name="submit"class="btn btn-success mx-3">Update</button>
+										
 									</div>
 								</form>
 							</div>

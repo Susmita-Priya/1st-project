@@ -20,6 +20,11 @@
    	   .pos{
         opacity: 0.9;
     }
+    .tag{
+			color:rgb(208,78,9);
+		font-family: 'Lobster', cursive;
+		font-weight: bold;
+		}
 	</style>
 	</head>
 	

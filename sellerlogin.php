@@ -53,7 +53,7 @@
 			$pass_decode=password_verify($pass,$db_pass);
 			$db_id=$email_pass['id'];
 
-			if($pass_decode && $id==$db_id){
+			if($pass_decode){
 			  ?>
 				<script>
 					alert("Login Successful");
@@ -124,10 +124,6 @@
 						<div class="card-body">
 							
 							<form action="#" method="post">
-								<div class="form-group text-light font-weight-bold">
-								<label for="id">Seller Id (Collect from office) <span class="text-danger">*</span></label>
-									<input type="text" name="id" id="id" class="form-control" required="" placeholder="Please enter your name" >
-									</div>
 								<div class="form-group text-light font-weight-bold">
 									<label for="email">Email Address <span class="text-danger">*</span></label>
 									<input type="email" name="email" id="email"  class="form-control form-control-lg" placeholder="Enter your email address">

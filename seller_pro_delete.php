@@ -25,6 +25,11 @@ $qu=$_GET['qu'];
     background-size: cover; 
     background-attachment: fixed;
     }
+    .tag{
+			color:rgb(208,78,9);
+		font-family: 'Lobster', cursive;
+		font-weight: bold;
+		}
    	   .pos{
         opacity: 0.9;
     }
@@ -43,7 +48,7 @@ $qu=$_GET['qu'];
 					$amount = $_POST['amount'];
                     $image = $_POST['image'];
 
-					$insertquery = "DELETE FROM product where id='$id'";
+					$insertquery = "DELETE FROM product where id=$id";
 						$iquery =mysqli_query ($con, $insertquery);
 
 						if($iquery){
@@ -119,7 +124,7 @@ $qu=$_GET['qu'];
 
 								<div class="card-footer text-center">
 									<div class="form-group">
-										<button type="submit" name="submit" class="btn btn-success mx-3 my-2">Submit</button>
+										<button type="submit" name="submit" class="btn btn-success mx-3 my-2">Delete</button>
 									</div>
 								</form>
 							</div>

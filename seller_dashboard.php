@@ -144,7 +144,7 @@ $nm=$_GET['nm'];
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<p class="padding">jhjj</p>
+				<p class="padding"></p>
 			</div>
 		</div>
 	</div>

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+ ?>
 <?php
 include ('insert.php');
 error_reporting(0);
@@ -91,6 +94,7 @@ $qu=$_GET['qu'];
 									<input type="text" name="amount" id="amount" class="form-control form-control-lg" required=""value="<?php echo $qu;?>" >
 									
 								</div>
+								
 								<div class="card-footer text-center">
 									<div class="form-group">
 										<button type="submit" name="submit" class="btn btn-success mx-3 my-2">Update</button>
@@ -116,11 +120,11 @@ $qu=$_GET['qu'];
 include 'insert.php';
 if(isset($_POST['submit']))
 {
-$ids = $_GET['id'];
+$ids = $_POST['id'];
 $name = $_POST['name'];
 $price = $_POST['price'];
 $amount = $_POST['amount'];
-$insertquery = "UPDATE product SET name='$name',price='$price',quantity='$amount' WHERE id='$ids'";
+$insertquery = "UPDATE product SET name='$name',price='$price',quantity='$amount' WHERE id=$ids";
 $iquery =mysqli_query($con, $insertquery);
 if($iquery){
 ?>
