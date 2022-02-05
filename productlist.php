@@ -22,6 +22,9 @@
 		.sub-menu{
 			border-bottom: none !important;
 		}
+		.al{
+			color: gray;
+		}
 	</head>
 	</style>
 	<body>
@@ -39,7 +42,6 @@
 		<div class="col-md-8 clearfix">
 			<div class="shop-menu clearfix pull-right">
 				<ul class="nav navbar-nav">
-								<li><a href="account.php"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="admin_dashboard.php"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
 							</ul>
 			</div>
@@ -66,7 +68,8 @@
 				<table class="table table-condensed table-hover">
 					<thead>
 						<tr class="cart_menu">
-							<th class="serial">Serial</td>						
+							<th class="serial">Serial</td>		
+							<th class="image">Image</td>						
 							<th class="id">Product Id</th>
 							<th class="name">Product Name</th>
 							<th class="price">price</th>
@@ -85,12 +88,13 @@
 						?>
 						<tr>
 							<td class="serial"><?php echo $serial++ ?></td>
+							<td class="image"> <?php echo "<img src='images/product/".$row['image']."'>" ?></td>
 							<td class="id"> <?php echo $row['id']?></td>
 							<td class="name"><?php echo $row['name']?></td>
 							<td class="price"><?php echo $row['price']?></td>
 							<td class="quantity"><?php echo $row['quantity']?></td>
-							<td class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></td>
-							<td class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></td>
+							<td class="edit"><a class="al" href="admin_pro_edit.php?id= <?php echo $row['id']; ?> & nm=<?php echo $row['name']; ?> &price=<?php echo $row['price']; ?> & qu=<?php echo $row['quantity']; ?> "><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+							<td class="delete"><a class="al" href="admin_pro_delete.php?id= <?php echo $row['id']; ?> & nm=<?php echo $row['name']; ?> &price=<?php echo $row['price']; ?> & qu=<?php echo $row['quantity']; ?> "><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
 						</tr>
 						<?php } ?>
 					</tbody>

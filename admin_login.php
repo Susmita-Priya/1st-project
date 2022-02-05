@@ -43,7 +43,7 @@
 		if($emailcount){
 			$email_pass=mysqli_fetch_assoc($query);
 			$db_pass=$email_pass['pass'];
-			$_SESSION['name'] = $email_pass['name'];
+			$_SESSION["email"] = $email;
 
 			if($pass==$db_pass){
 			  ?>

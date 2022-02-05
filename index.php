@@ -30,7 +30,7 @@
 						<ul role="menu" class="sub-menu">
 							<li><a href="admin_login.php">Admin</a></li>
 							<li><a href="logincustomer.php">Customer</a></li>
-							<li><a href="#">Shopper</a></li>
+							<li><a href="sellerlogin.php">Shopper</a></li>
 							<li><a href="#">Delivery Boy</a></li>
 						</ul>
 					</li>

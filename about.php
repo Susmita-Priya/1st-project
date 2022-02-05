@@ -45,13 +45,9 @@
 		.tx{
 					font-weight: bold;
 					font-size: 18px;
-				
 					font-family: 'Lobster', cursive;
-				}
-
-
-
-				.main{
+	    }
+        .main{
 			list-style: none;
 			padding: 0;
 			margin: 0;

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -53,9 +54,9 @@
 			<ul class="nav navbar-nav listy">
 				<li><a href="admin_dashboard.php"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp Dashboard</a></li>
 				<li><a href="productlist.php"><i class="fa fa-list" aria-hidden="true"></i>&nbsp Product list</a></li>
-				<li><a href="orderlist.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Orders</a></li>
+				<li><a href="orderlist.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Order List</a></li>
 				<li><a href="admindelivery.php"><i class="fa fa-book" aria-hidden="true"></i>&nbsp Delivery-status</a></li>
-				<li><a href="admin_feedback.php"><i class="fa fa-star" aria-hidden="true"></i>&nbsp Feedback</a></li>
+				<li><a href="admin_feedback.php"><i class="fa fa-star" aria-hidden="true"></i>&nbsp Feedback List</a></li>
 				<li><a href="index.php"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp logout</a></li>
 				</ul>
 			</div>
@@ -94,7 +95,7 @@
 							<tr>
 								<td class="serial"><?php echo $serial++ ?></td>
 								<td class="name"><?php echo $row['username']?></td>
-								<td class="conct"><?php echo $row['number']?></td>
+								<td class="conct"><?php echo $row['nmber']?></td>
 								<td class="email"><?php echo $row['email']?></td>
 								<td class="birth"><?php echo $row['dob']?></td>
 								<td class="div"><?php echo $row['district']?></td>
@@ -107,8 +108,17 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="col-sm-3">
 		</div>
+		<?php
+         include 'insert.php';
+           $query="SELECT * FROM loginseller ORDER BY email ASC";
+           $result = mysqli_query($con,$query) or die("Failed");
+           $count = mysqli_num_rows($result);
+
+           if($count >0){
+           ?>
 		<div class="col-sm-9">
 				<div class="breadcrumbs">
 					<h1 class="headd">Shopper's-information</h1>
@@ -117,35 +127,32 @@
 					<table class="table table-condensed table-hover">
 						<thead>
 							<tr class="cart_menu">
-								<td class="name">Full name</td>
-								<td class="conct">Contact</td>
+								<th class="serial">Serial</th>
+								<td class="id">Seller Id</td>
 								<td class="email">E-mail</td>
-								<td class="birth">Date-of-birth</td>
-								<td class="div">Division</td>
+								<td class="name">name</td>
+								<td class="contact">Contact no</td>
 								<td class="address">Address</td>
-								<td class="pass">Password</td>
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+							$serial = 1;
+						while($row = mysqli_fetch_assoc($result))
+						{	
+						
+						?>
 							<tr>
-								<td class="name">Priya Saha</td>
-								<td class="conct">01766829719</td>
-								<td class="email">ps4966829@gmail.com</td>
-								<td class="birth">28-8-2000</td>
-								<td class="div">Dhaka</td>
-								<td class="address">lokkhibazar,puran dhaka</td>
-								<td class="pass">12345678</td>
+								<td class="serial"><?php echo $serial++ ?></td>
+								<td class="id"><?php echo $row['id']?></td>
+								<td class="email"><?php echo $row['email']?></td>
+								<td class="name"><?php echo $row['name']?></td>
+								<td class="contact"><?php echo $row['contact']?></td>
+								<td class="address"><?php echo $row['address']?></td>
 							</tr>
-							<tr>
-								<td class="name">Tanvir ahammed</td>
-								<td class="conct">01766829712</td>
-								<td class="email">hmhridoy@gmail.com</td>
-								<td class="birth">07-10-2000</td>
-								<td class="div">Dhaka</td>
-								<td class="address">lokkhibazar,puran dhaka</td>
-								<td class="pass">12345678</td>
-							</tr>
+						<?php } ?>
 						</tbody>
+						<?php } ?>
 					</table>
 				</div>
 			</div>

@@ -51,7 +51,7 @@
 			$db_pass=$email_pass['pass'];
 			$user=$email_pass['name'];
 			$pass_decode=password_verify($pass,$db_pass);
-			$db_id=$email_pass['id'];
+			$emaill=$email_pass['email'];
 
 			if($pass_decode){
 			  ?>

@@ -77,7 +77,7 @@ session_start();
           if($password===$cpassword)
           	// data and value check ===
 		{
-		$insertquery = "insert into logincustomer(username,number,email,dob,district,address,pass,pass1,token,status) values('$username','$number','$email', '$dob','$district' ,'$address','$pass','$pass1','$token','inactive')";
+		$insertquery = "insert into logincustomer(username,nmber,email,dob,district,address,pass,pass1,token,status) values('$username','$number','$email', '$dob','$district' ,'$address','$pass','$pass1','$token','inactive')";
 		$iquery =mysqli_query ($con, $insertquery);
 
 		if($iquery){
@@ -85,7 +85,7 @@ session_start();
                 $subject = "Email Activation";
                 $body = "Hi, $username. Click here to activate your account 
                  http://localhost/Project/activated.php?token=$token";
-                $sender_email = "From: saha06571@gmail.com";
+                $sender_email = "From:ps4966829@gmail.com";
 
                if (mail($to_email, $subject, $body, $sender_email)) {
                  $_SESSION ['msg']="Check your mail to activated your account $email";

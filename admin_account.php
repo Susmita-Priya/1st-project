@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,12 +117,12 @@
 								</div>
 								<div class="form-group">
 									<label for="name">Full Name </label>
-									<input type="text" name="username" id="name" class="form-control"  value="<?php echo $user;?>" >
+									<input type="text" name="username" id="name" class="form-control"  value="<?php echo $user;?>"  placeholder="Name" >
 								</div>
 								</div>
 								<div class="card-footer text-center">
 									<div class="form-group">
-										<button type="submit" class="btn btn-success mx-3">Update</button>
+										<button type="reset=" class="btn btn-success mx-3">Clear</button>
 									</div>
 								</form>
 							</div>

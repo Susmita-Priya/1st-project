@@ -1,6 +1,17 @@
 <?php 
 session_start();
  ?>
+<?php
+include ('insert.php');
+error_reporting(0);
+$em=$_GET['em'];
+$nm=$_GET['nm']; 
+$cn=$_GET['cn']; 
+$dob=$_GET['dob']; 
+$div=$_GET['div']; 
+$add =$_GET['add'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,53 +55,32 @@ session_start();
 	h2{
 		font-size: 25px!important;
 	}
-	.already{
-				color: white;
-				font-size: 17px;
-			}
-			.al{
-				color: orange;
-				font-size: 17px;
-			}
 </style>
 </head><!--/head-->
-
-<body>
-	<?php 
-		$user="";
-		$numbr="";
-		$dob="";
-		$district="";
-		$address="";
-		$email="";
-        include 'insert.php';
-
-		if(isset($_POST['submit'])){
+<?php
+			if(isset($_POST['submit']))
+			{
          
-		$email= $_POST['email'];
+		$username=mysqli_real_escape_string($con, $_POST['username']);
+		$number= mysqli_real_escape_string($con,$_POST['nmber']);
+		$email= mysqli_real_escape_string($con,$_POST['email']);
+		$dob= mysqli_real_escape_string($con,$_POST['dob']);
+		$district=mysqli_real_escape_string($con, $_POST['division']);
+		$address=mysqli_real_escape_string( $con,$_POST['address']);
 
-		$emailquery ="select * from logincustomer where email='$email'";
-		$query = mysqli_query ($con,$emailquery) or die("query faild");
+         $emailquery="UPDATE logincustomer SET username='$username',nmber='$number',dob='$dob',district='$district',address='$address' WHERE email='$email'";
 
-		$emailcount = mysqli_num_rows($query);
-
-		if($emailcount){
-			$email_pass=mysqli_fetch_assoc($query);
-			$user=$email_pass['username'];
-			$numbr=$email_pass['nmber'];
-			$dob=$email_pass['dob'];
-			$district=$email_pass['district'];
-			$address=$email_pass['address'];
-			}else{	
-			?>
-			<script>
-			alert("Invalid Email");
-			</script>
-			<?php
-				}
-			}
-
-        ?>
+         $query = mysqli_query($con,$emailquery) or die("query faild");
+         if($query)
+         ?>
+         <script>
+		 alert("Successful !");
+		location.replace("account.php");
+		</script>
+		<?php
+	}
+        ?> 
+<body>
 	<header id="header"><!--header-->
 		<div class="header-top"><!--header-top-->
 			<div class="container">
@@ -153,19 +143,16 @@ session_start();
 							<form action="#" method="post">
 								<div class="form-group">
 									<label for="email">E-mail address</label>
-									<input type="email" name="email" id="email"  class="form-control"value="<?php echo $email;?>" placeholder="Enter your email address" >
-								</div>
-								<div class="form-group text-center">
-										<button type="submit" name="submit" class="btn btn-success mx-3 my-2">Ok</button>
+									<input type="email" name="email" id="email"  class="form-control" value="<?php echo $em;?>" readonly="">
 								</div>
 								<div class="form-group">
 									<label for="name">Full Name </label>
-									<input type="text" name="username" id="name" class="form-control" value="<?php echo $user;?>" >
+									<input type="text" name="username" id="name" class="form-control" value="<?php echo $nm;?>" >
 									
 								</div>
 								<div class="form-group">
 									<label for="nmbr">Contact Number</label>
-									<input type="text" name="nmbr" id="nmbr" class="form-control "  value="<?php echo $numbr;?>" >
+									<input type="text" name="nmber" id="nmbr" class="form-control "  value="<?php echo $cn;?>" >
 									
 								</div>
 								
@@ -175,18 +162,19 @@ session_start();
 								</div>
 								<div class="form-group">
 									<label for="dis">Division</label>
-									<input type="text" name="division" id="division" class="form-control "  value="<?php echo $district;?>" >
+									<input type="text" name="division" id="division" class="form-control "  value="<?php echo $div;?>" >
 								</div>
 								<div class="form-group">
 									<label for="address">Address</label>
-									<input type="text" name="address" id="address" class="form-control"  value="<?php echo $address;?>" >
+									<input type="text" name="address" id="address" class="form-control"  value="<?php echo $add;?>" >
 									
 								</div>
 								</div>
 								
 								<div class="card-footer text-center">
-									<div>
-										<p class="already"><span><a class="al" href="update_info.php?em=<?php echo $email;?> & nm=<?php echo $user;?> &cn=<?php echo $numbr;?> & dob=<?php echo $dob;?> & div=<?php echo $district;?> & add=<?php echo $address;?>">Update information ?</a></span></p>
+									<div class="form-group">
+										<button type="submit" name="submit"class="btn btn-success mx-3">Update</button>
+										
 									</div>
 								</form>
 							</div>

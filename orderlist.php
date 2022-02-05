@@ -39,7 +39,6 @@
 		<div class="col-md-8 clearfix">
 			<div class="shop-menu clearfix pull-right">
 				<ul class="nav navbar-nav">
-								<li><a href="account.php"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="admin_dashboard.php"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
 							</ul>
 			</div>
